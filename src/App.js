@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
 export default function App() {
@@ -48,18 +48,18 @@ export default function App() {
     },
     {
       name: "Stranger Things",
-      Rating: "4/5",
-      Description: "",
+      rating: "4/5",
+      description: "",
       genre: "Thriller",
     },
   ];
-  let filteredArr = [];
+
+  let [filteredArr, setFilterArr] = useState([]);
+
   function clickHandler(event) {
-    console.log("clicked");
     const name = event.target.getAttribute("name");
-    console.log({ name });
     filteredArr = tvShows.filter((obj) => obj.genre === name);
-    console.log({ filteredArr });
+    setFilterArr(filteredArr);
   }
   return (
     <div className="App">
@@ -82,7 +82,10 @@ export default function App() {
       <div>
         <div>
           {filteredArr.map((obj) => (
-            <span>{obj.name}</span>
+            <div className= "book-info">
+              {obj.name}
+              {obj.rating}
+            </div>
           ))}
         </div>
       </div>
