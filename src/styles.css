@@ -7,7 +7,7 @@
   text-align: left;
   border: 1px solid black;
   padding: 1rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .tvshow-name {
@@ -16,8 +16,25 @@
   padding-bottom: 0.5rem;
 }
 
+.tvshow-rating {
+  margin-bottom: 0.5rem;
+}
+
 .genre-btn {
+  display: block;
+  padding: 1rem;
+  margin: 0rem;
   border-bottom: 1px solid black;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
+}
+
+button {
+  width: fit-content;
+  padding: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-family: monospace;
 }
